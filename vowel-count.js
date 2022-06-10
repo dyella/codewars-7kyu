@@ -8,7 +8,6 @@
 function getCount(str) {
     let vowelsCount = 0;
     
-    // enter your magic here
     //turn the input into a string
     var string = str.toString();
   
