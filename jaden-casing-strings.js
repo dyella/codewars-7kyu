@@ -12,3 +12,14 @@ String.prototype.toJadenCase = function () {
   const str2 = str.charAt(0).toUpperCase() + str.slice(1);
   return str2;
   };
+
+  //Alt
+  String.prototype.toJadenCase = function () {
+    return this.replace(/(^|\s)[a-z]/g, function(x){ return x.toUpperCase(); });
+  };
+
+  String.prototype.toJadenCase = function () { 
+    return this.split(" ").map(function(word){
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    }).join(" ");
+  }
