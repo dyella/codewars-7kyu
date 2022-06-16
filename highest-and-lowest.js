@@ -5,4 +5,20 @@
 // highAndLow("1 2 -3 4 5"); // return "5 -3"
 // highAndLow("1 9 3 4 -5"); // return "9 -5"
 
-//My solution
+//My solution (incomplete)
+function highAndLow(numbers){
+    // ...
+  const highest = Math.max(numbers);
+    console.log(highest);  
+  }
+
+//Alt
+function highAndLow(numbers){
+    numbers = numbers.split(' ').map(Number);
+    return Math.max.apply(0, numbers) + ' ' + Math.min.apply(0, numbers);
+  }
+
+  function highAndLow(numbers){
+    numbers = numbers.split(' ');
+    return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
+  }
